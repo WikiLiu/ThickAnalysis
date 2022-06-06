@@ -28,5 +28,10 @@
   "directory": "/home/wiki/c++/project/ThickAnalysis/build",
   "command": "/usr/bin/g++  -I/home/wiki/c++/project/ThickAnalysis/include   -Wall -g -o CMakeFiles/ThickAnalysis_o.dir/src/Count.cpp.o -c /home/wiki/c++/project/ThickAnalysis/src/Count.cpp",
   "file": "/home/wiki/c++/project/ThickAnalysis/src/Count.cpp"
+},
+{
+  "directory": "/home/wiki/c++/project/ThickAnalysis/build",
+  "command": "/usr/bin/g++  -I/home/wiki/c++/project/ThickAnalysis/include   -Wall -g -o CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o -c /home/wiki/c++/project/ThickAnalysis/src/parameter.cpp",
+  "file": "/home/wiki/c++/project/ThickAnalysis/src/parameter.cpp"
 }
 ]

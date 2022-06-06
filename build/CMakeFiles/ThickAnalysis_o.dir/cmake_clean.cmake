@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ThickAnalysis_o.dir/src/Out.cpp.o.d"
   "CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.o"
   "CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.o.d"
+  "CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o"
+  "CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o.d"
   "CMakeFiles/ThickAnalysis_o.dir/src/readsql.cpp.o"
   "CMakeFiles/ThickAnalysis_o.dir/src/readsql.cpp.o.d"
   "ThickAnalysis_o"

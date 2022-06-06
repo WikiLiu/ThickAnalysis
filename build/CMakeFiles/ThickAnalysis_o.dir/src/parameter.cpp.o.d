@@ -1,7 +1,6 @@
-CMakeFiles/ThickAnalysis_o.dir/src/Logic.cpp.o: \
- /home/wiki/c++/project/ThickAnalysis/src/Logic.cpp \
+CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o: \
+ /home/wiki/c++/project/ThickAnalysis/src/parameter.cpp \
  /usr/include/stdc-predef.h \
- /home/wiki/c++/project/ThickAnalysis/include/Logic.h \
  /home/wiki/c++/project/ThickAnalysis/include/parameter.h \
  /usr/include/c++/12.1.0/string \
  /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h \

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _SOMEFOUNCTION_H
 #define _SOMEFOUNCTION_H
 
@@ -6,6 +7,7 @@
 #include <chrono>
 #include <string>
 #include <memory>
+#include "readsql.h"
 
 using std::chrono::system_clock;
 
@@ -34,6 +36,14 @@ std::string current_time()
 
     return std::string(buf) + milliseconds_str;
 };
+
+
+// class parameters{
+
+// public:
+//  thick_plus set_thick_plus=0;
+//  date now_date=current_time();
+// };
 
 
 float force_calcular(vector<float> canshuliebiao)

@@ -249,6 +249,30 @@ src/mian.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThickAnalysis_o.dir/build.make CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.s
 .PHONY : src/mian.cpp.s
 
+src/parameter.o: src/parameter.cpp.o
+.PHONY : src/parameter.o
+
+# target to build an object file
+src/parameter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThickAnalysis_o.dir/build.make CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o
+.PHONY : src/parameter.cpp.o
+
+src/parameter.i: src/parameter.cpp.i
+.PHONY : src/parameter.i
+
+# target to preprocess a source file
+src/parameter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThickAnalysis_o.dir/build.make CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.i
+.PHONY : src/parameter.cpp.i
+
+src/parameter.s: src/parameter.cpp.s
+.PHONY : src/parameter.s
+
+# target to generate assembly for a file
+src/parameter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThickAnalysis_o.dir/build.make CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.s
+.PHONY : src/parameter.cpp.s
+
 src/readsql.o: src/readsql.cpp.o
 .PHONY : src/readsql.o
 
@@ -297,6 +321,9 @@ help:
 	@echo "... src/mian.o"
 	@echo "... src/mian.i"
 	@echo "... src/mian.s"
+	@echo "... src/parameter.o"
+	@echo "... src/parameter.i"
+	@echo "... src/parameter.s"
 	@echo "... src/readsql.o"
 	@echo "... src/readsql.i"
 	@echo "... src/readsql.s"

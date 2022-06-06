@@ -15,4 +15,4 @@ set(ThickAnalysis ${DIR_SRCS})
 
 link_libraries("sqlite3")
 
-add_executable(ThickAnalysis_o src/Logic.cpp src/mian.cpp  src/Analysis_1780.cpp  src/readsql.cpp src/Out.cpp src/Count.cpp)
+add_executable(ThickAnalysis_o src/Logic.cpp src/mian.cpp  src/Analysis_1780.cpp  src/readsql.cpp src/Out.cpp src/Count.cpp src/parameter.cpp)

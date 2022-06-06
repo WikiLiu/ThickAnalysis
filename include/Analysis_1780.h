@@ -1,9 +1,7 @@
 #ifndef _ANALYSIS1780_H_
 #define _ANALYSIS1780_H_
 
-#include"Logic.h"
-#include"Count.h"
-#include"Out.h"
+
 #include<string>
 using namespace std;
 typedef string strip_no;

@@ -2,69 +2,20 @@
 #include "Logic.h"
 #include "Out.h"
 #include "readsql.h"
+#include "sqlite3.h"
 #include "parameter.h"
 #include <iostream>
 #include <ctime>
-#include "sqlite3.h"
+#include "somefounction.h"
 #include <thread>
-using namespace std;
 
+using namespace std;
+extern struct parameter parameter_current;
 static float access;
 
-int size_stuff(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_stuff)
-{
-
-    (*return_stuff)["force"] = 0.5;
-    (*return_stuff)["temp"] = 0.5;
-    if (size_stuff_judge(1, 2, 3, 4).compare())
-    {
-        out::consequece_stuff(outfile);
-        count::size_to_temp(sql, current_strip);
-        access = count::size_to_force(sql, current_strip);
-        count::force_to_roll(sql, current_strip, access); //改成合理的顺序 是不是要温度扎制力累加起来 如果是 要设一个指针指到和
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
-}
-
-int speed(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_speed)
-{
-    (*return_speed)["force"] = 0.5;
-    (*return_speed)["temp"] = 0.5;
-
-    if (speed_judge(1.0, 2.0, 3.0).compare())
-    {
-        out::consequece_speed(outfile);
-        count::speed_to_temp(sql, current_strip);
-        count::speed_to_force(sql, current_strip);
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
-}
-
-int water(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_water)
-{
-    (*return_water)["force"] = 0.5;
-    (*return_water)["temp"] = 0.5;
-
-    if (speed_judge(1, 2, 3).compare())
-    {
-        out::consequece_water(outfile);
-        count::water_to_temp(sql, current_strip);
-        count::water_to_force(sql, current_strip);
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
-}
+int size_stuff(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_stuff);
+int speed(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_speed);
+int water(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_speed);
 
 int analysis_1780()
 {
@@ -90,12 +41,10 @@ int analysis_1780()
         std::clog << "open error\n";
     }
     char combat[120] = "select rowid,* from '2021-11' where STRIP_NO=";
-    strcat(strcat(combat, parameter_current.strip_no)," and STAND_NO=7;");
+    strcat(strcat(combat, parameter_current.strip_no), " and STAND_NO=7;");
 
+    onestrip current_strip = search_dat(sql, combat);
 
-   onestrip  current_strip = search_dat(sql, combat);
-
-  
     // judge *aaa = new force_act_judge(10, 20,10);
     // cout << aaa->compare() << endl;
 
@@ -115,13 +64,14 @@ int analysis_1780()
     {
         exit(1);
     }
+
     if (force_act_judge(current_strip["ROLL_FORCE_CAL"], current_strip["FORCE"] + current_strip["FORCE_WS"], current_strip["FM_THICK_ACT"] - current_strip["FMOUTTHICK"]).compare())
     {
         if (thick_roll_judge(current_strip["delta_thick"], count::force_to_roll(sql, current_strip)).compare()) //////a,b
         {
             out::consequece_force(&outfile);
-            if (act_act_judge(1000, 1000).compare()) //////////////给出一个标志位 什么时候测量异常
-            {                                        ///////////////
+            if (act_act_judge(current_strip["FORCE"], current_strip["FORCE_WS"]).compare()) //////////////给出一个标志位 什么时候测量异常
+            {                                                                               ///////////////
                 if (post_force_act_judge(current_strip["ROLL_FORCE_POST"], current_strip["FORCE"] + current_strip["FORCE_WS"]).compare())
                 {
                     //////扎制力模型准确
@@ -185,7 +135,7 @@ int analysis_1780()
                         if (current_strip["CORR_ZEROPOINT_USE"] == 0)
                             out::consequece_heredity(&outfile, "换辊后辊缝学习值置零");
                         ////////这里可增加一条新钢种 就写一条sql quary为null
-                        if (!query_kind(sql, current_strip))   ////非表示没查到
+                        if (!query_kind(sql, current_strip)) ////非表示没查到
                         {
                             out::consequece_heredity(&outfile, "该规格第一次扎制");
                         };
@@ -213,4 +163,59 @@ int analysis_1780()
 
     sqlite3_close(sql);
     return 0;
+}
+
+int size_stuff(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_stuff)
+{
+
+    (*return_stuff)["force"] = 0.5;
+    (*return_stuff)["temp"] = 0.5;
+    if (size_stuff_judge(1, 2, 3, 4).compare())
+    {
+        out::consequece_stuff(outfile);
+        count::size_to_temp(sql, current_strip);
+        access = count::size_to_force(sql, current_strip);
+        count::force_to_roll(sql, current_strip, access); //改成合理的顺序 是不是要温度扎制力累加起来 如果是 要设一个指针指到和
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+int speed(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_speed)
+{
+    (*return_speed)["force"] = 0.5;
+    (*return_speed)["temp"] = 0.5;
+
+    if (speed_judge(1.0, 2.0, 3.0).compare())
+    {
+        out::consequece_speed(outfile);
+        count::speed_to_temp(sql, current_strip);
+        count::speed_to_force(sql, current_strip);
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+int water(sqlite3 *sql, string *outfile, onestrip &current_strip, map<string, float> *return_water)
+{
+    (*return_water)["force"] = 0.5;
+    (*return_water)["temp"] = 0.5;
+
+    if (speed_judge(1, 2, 3).compare())
+    {
+        out::consequece_water(outfile);
+        count::water_to_temp(sql, current_strip);
+        count::water_to_force(sql, current_strip);
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
 }

@@ -70,7 +70,6 @@ CMakeFiles/ThickAnalysis_o.dir/src/Count.cpp.o: \
  /usr/include/c++/12.1.0/tr1/poly_hermite.tcc \
  /usr/include/c++/12.1.0/tr1/poly_laguerre.tcc \
  /usr/include/c++/12.1.0/tr1/riemann_zeta.tcc \
- /home/wiki/c++/project/ThickAnalysis/include/readsql.h \
  /usr/include/c++/12.1.0/math.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/12.1.0/iostream \
  /usr/include/c++/12.1.0/ostream /usr/include/c++/12.1.0/ios \

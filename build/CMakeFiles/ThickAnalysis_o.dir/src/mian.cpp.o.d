@@ -70,7 +70,6 @@ CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.o: \
  /usr/include/c++/12.1.0/tr1/poly_hermite.tcc \
  /usr/include/c++/12.1.0/tr1/poly_laguerre.tcc \
  /usr/include/c++/12.1.0/tr1/riemann_zeta.tcc \
- /home/wiki/c++/project/ThickAnalysis/include/readsql.h \
  /usr/include/c++/12.1.0/math.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/12.1.0/iostream \
  /usr/include/c++/12.1.0/ostream /usr/include/c++/12.1.0/ios \
@@ -169,10 +168,4 @@ CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.o: \
  /usr/include/c++/12.1.0/bits/erase_if.h \
  /home/wiki/c++/project/ThickAnalysis/include/Logic.h \
  /home/wiki/c++/project/ThickAnalysis/include/Analysis_1780.h \
- /home/wiki/c++/project/ThickAnalysis/include/Logic.h \
- /home/wiki/c++/project/ThickAnalysis/include/Count.h \
- /home/wiki/c++/project/ThickAnalysis/include/Out.h \
- /usr/include/c++/12.1.0/fstream /usr/include/c++/12.1.0/bits/codecvt.h \
- /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/12.1.0/bits/fstream.tcc /usr/include/c++/12.1.0/ctime
+ /usr/include/c++/12.1.0/ctime

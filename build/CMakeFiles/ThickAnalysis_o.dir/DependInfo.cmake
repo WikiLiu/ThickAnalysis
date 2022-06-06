@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/wiki/c++/project/ThickAnalysis/src/Logic.cpp" "CMakeFiles/ThickAnalysis_o.dir/src/Logic.cpp.o" "gcc" "CMakeFiles/ThickAnalysis_o.dir/src/Logic.cpp.o.d"
   "/home/wiki/c++/project/ThickAnalysis/src/Out.cpp" "CMakeFiles/ThickAnalysis_o.dir/src/Out.cpp.o" "gcc" "CMakeFiles/ThickAnalysis_o.dir/src/Out.cpp.o.d"
   "/home/wiki/c++/project/ThickAnalysis/src/mian.cpp" "CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.o" "gcc" "CMakeFiles/ThickAnalysis_o.dir/src/mian.cpp.o.d"
+  "/home/wiki/c++/project/ThickAnalysis/src/parameter.cpp" "CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o" "gcc" "CMakeFiles/ThickAnalysis_o.dir/src/parameter.cpp.o.d"
   "/home/wiki/c++/project/ThickAnalysis/src/readsql.cpp" "CMakeFiles/ThickAnalysis_o.dir/src/readsql.cpp.o" "gcc" "CMakeFiles/ThickAnalysis_o.dir/src/readsql.cpp.o.d"
   )
 
