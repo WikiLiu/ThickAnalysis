@@ -1,0 +1,1 @@
+/usr/bin/g++   -Wall -g -rdynamic CMakeFiles/th.dir/src/mian.cpp.o -o th 

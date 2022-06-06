@@ -1,0 +1,3 @@
+/home/wiki/c++/project/ThickAnalysis/build/CMakeFiles/ThickAnalysis_o.dir
+/home/wiki/c++/project/ThickAnalysis/build/CMakeFiles/edit_cache.dir
+/home/wiki/c++/project/ThickAnalysis/build/CMakeFiles/rebuild_cache.dir

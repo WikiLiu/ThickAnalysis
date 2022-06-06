@@ -1,0 +1,1 @@
+/usr/bin/g++   -Wall -g -rdynamic CMakeFiles/ThickaAnalysis.dir/src/mian.cpp.o -o ThickaAnalysis 

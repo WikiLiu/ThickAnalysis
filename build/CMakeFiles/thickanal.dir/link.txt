@@ -1,0 +1,1 @@
+/usr/bin/g++   -Wall -g -rdynamic CMakeFiles/thickanal.dir/src/mian.cpp.o -o thickanal 
